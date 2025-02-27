@@ -104,7 +104,7 @@ if uploaded_cvs and job_desc_text:
     st.subheader("Ranked Candidates:")
     for i, (resume, score) in enumerate(ranked_candidates):
         name = extract_name(resume)
-        st.write(f"**{i+1}. {name} - Score: {score}**")
+        st.write(f"**{i+1}. {name} **")
 
         cursor.execute("INSERT INTO candidates (name, resume_text, job_description, score) VALUES (?, ?, ?, ?)", 
                        (name, resume, job_desc_text, score))
