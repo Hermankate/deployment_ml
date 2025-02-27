@@ -1,0 +1,7 @@
+streamlit
+pandas
+requests
+pdfplumber
+python-docx
+docx2txt
+pillow
