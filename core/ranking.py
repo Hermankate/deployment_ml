@@ -261,6 +261,8 @@ class Ranker:
         self.vectorizer = vectorizer
         self._validate_secrets()
         self.api_url = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3"
+        # In Ranker class, change the API URL to:
+        self.api_url = "https://api-inference.huggingface.co/models/google/flan-t5-xxl"  # Free tier compatible
         self.headers = {"Authorization": f"Bearer {st.secrets['secrets']['API_KEY']}"}
         self.max_retries = 3
         self.retry_delay = 5
